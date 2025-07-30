@@ -1,0 +1,669 @@
+ *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+ 
+ body {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+
+html,body{
+  overflow-x: hidden;
+}
+body.no-scroll,
+  html.no-scroll{
+  overflow: hidden;
+  height: 100%;
+}
+  
+
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  
+}
+
+.navbars{
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.navbars a{
+  text-decoration: none;
+  color: black;
+}
+nav{
+  position: absolute;
+  padding: 20px 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  z-index: 9999;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+}
+nav button,
+.section4 button{
+  width: 230px;
+  padding: 10px;
+   background-color: #FCD34D;
+   color: #78350F;
+   font-size: large;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  
+}
+.headercontent{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  
+  
+  
+}
+.headh2{
+  display: none;
+}
+.headertext h1{
+  font-size: 60px;
+  padding-bottom: 20px;
+}
+.headertext p{
+  font-size: large;
+}
+.headerimage{
+  width: 830px;
+  height: 850px;
+  margin-top: -60px;
+  padding-right: 0;
+  background-image: url(/images/Image.png);
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  
+}
+
+.headertext{
+  
+  padding-top: 170px;
+  padding-left: 80px;
+  
+  
+  
+  
+  
+  
+  
+}
+.headertext button{
+  width: 230px;
+  padding: 15px;
+  font-weight: bolder;
+  font-size: large;
+  background-color: #FCD34D;
+   color: #78350F;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+.headerbutton{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.user{
+  display: flex;
+  padding-top: 20px;
+  gap: 15px;
+  align-items: center;
+}
+p,
+h2{
+  color: #0F172A;
+}
+.section4 span{
+  color: #2e4479;
+  padding-top: 2px;
+}
+h1{
+  font-size: 40px;
+  color: #0F172A;
+}
+h3{
+  color: #0F172A;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+span{
+  color: #D97706;
+}
+.dropdown-content{
+  display: none;
+  min-width: 160px;
+  box-shadow: 5px 4px 8px rgba (0, 0, 0, 0.1);
+  z-index: 1;
+  position: absolute;
+}
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content p{
+  color: black;
+  background-color:  #FCD34D;
+  padding: 12px 16px;
+  margin: 0;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+}
+.show{
+  display: block;
+}
+.section1{
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: -150px;
+}
+
+.section1down{
+  background-image: url(/images/Circles.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    padding-bottom: 20px;
+  
+  
+}
+.section1down img{
+  object-fit: cover;
+  
+}
+.section1downimage{
+  display: flex;
+  padding-top: 250px;
+  justify-content: center;
+  
+
+}
+
+
+.section2content{
+  padding-right: 80px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  padding-top: 40px;
+  max-width: 100%;
+}
+.section3content{
+  padding-left: 80px;
+  display: flex;
+  gap: 80px;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 100%;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.section2textcontent{
+ max-width: 60%;
+}
+.section2image img{
+  width: auto;
+  height: 800px;
+  object-fit: contain;
+}
+.section3textcontent{
+   max-width: 60%;
+   flex: 1;
+   
+}
+.section3image{
+  flex-shrink: 0;
+  height: 100%;
+}
+
+
+.section3img{
+   
+width: auto;
+  height: 800px;
+  margin-right: 0;
+
+display: block;
+  object-fit: contain; 
+  
+}
+
+
+
+.section2text{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  
+  
+
+}
+
+.section3text {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+
+}
+
+.section2text1,
+.section3text1{
+  padding-top: 50px;
+}
+.section4{
+  background-color: rgb(165, 8, 165);
+   padding-bottom: 80px;
+   padding-top: 30px;
+}
+.section4text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+}
+.section4icon{
+  padding-left: 80px;
+  padding-top: 40px;
+  color: rgb(236, 236, 92);
+  
+}
+.section4icon button{
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  font-size: larger;
+   border-radius: 50%;
+   background-color: transparent;
+   border: 3px solid rgb(247, 247, 69);
+}
+
+
+.section4card{
+  display: flex;
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 20px;
+  width: 100%;
+  flex-shrink: 0;
+  overflow-x: auto;
+   scroll-behavior: smooth;
+  
+  
+}
+.section4card::-webkit-scrollbar {
+  display: none;
+}
+
+
+.section4user{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.section4cardtext{
+  padding: 30px 30px;
+  width: 380px;
+  box-shadow: 0 4px 8px rgba (0, 0, 0, 0.1);
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.section5 {
+  padding: 40px 80px;
+}
+.section5 p{
+  font-size: larger
+}
+.section5 h1{
+padding-top: 10px;
+font-size: 60px;  
+padding-bottom: 30px;
+}
+
+
+.section5content{
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  
+}
+.section6content{
+  background-image: url(/images/power\ bg[1].png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+    background-color: rgb(165, 8, 165);
+
+    overflow: hidden;
+  
+  
+  
+}
+
+.section6text{
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  color: #0F172A;
+ 
+}
+.section6image{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.section6 img{
+  width: 1100px;
+  height: auto;
+
+  object-fit: cover;
+}
+.ps6{
+  color: #78350F;
+  padding-top: 12px;
+  
+}
+.section6 button{
+   width: 250px;
+  padding: 13px;
+  font-weight: bolder;
+  font-size: larger;
+  background-color: #FCD34D;
+   color: #78350F;
+  border: none;
+  border-radius: 30px;
+  
+}
+
+footer{
+  padding: 20px 80px;
+}
+.footertexttop{
+display: flex;
+ align-items: center;
+ gap: 10px;
+}
+.footercontent{
+  display: flex;
+  justify-content: space-between;
+}
+.footertext{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footertext1{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+ #menu-icon{
+  display: none;
+  background-color: #da8627;
+  border-radius: 50px;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: xx-large;
+  
+ }
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    z-index: 99;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+  }
+  .headh2{
+    display: block;
+  }
+  .headp{
+    text-align: left;
+  }
+  .user br{
+    display: block;
+  }
+  br{
+    display: none;
+  }
+  nav h2{
+    display: block;
+  }
+  .dropdown-content p{
+    background-color: white;
+  }
+  
+
+  #nav-bar
+   {
+    display: none;
+    flex-direction: column;
+     background: rgb(183, 225, 241);
+    position: absolute;
+    color: white;
+    top: 0px;
+    gap: 50px;
+    right: 0px;
+    padding: 60px;
+    padding-top: 100px;
+    font-weight: bolder;
+    font-size: large;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .headerbutton{
+    display: none;
+    
+  }
+
+  #nav-bar.sidebar {
+    display: flex;
+  }
+  nav{
+    padding: 8px 10px;
+    
+  }
+  .headercontent{
+    flex-direction: column-reverse;
+    
+  }
+  
+  .headertext{
+    padding: 10px 10px;
+    text-align: center;
+    
+  }
+  .headertext h1{
+    font-size: 34px;
+    text-align: center;
+  }
+  h1{
+    font-size: 34px;
+    padding-bottom: 10px;
+  }
+  .headertext button{
+    padding: 18px;
+    margin-bottom: 60px;
+  }
+  
+  .headerimage{
+    width: 100%;
+    height: 700px;
+    margin-top: -0px;
+    margin-left: 10px;
+    object-fit: cover;
+  }
+  .section1{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -50px;
+  }
+  .section1down{
+    width: 100%;
+  }
+  .section1down img{
+    width: 90%;
+  }
+  .section1downimage{
+    padding-top: 120px;
+  }
+  .section2content{
+    flex-direction: column-reverse;
+    padding-right: 10px;
+    width: 100%;
+    
+  }
+  .section3content{
+    flex-direction: column;
+    padding-left: 10px;
+    width: 100%;
+    
+  }
+  .section2image img{
+    max-width: 100%;
+    height: auto;
+  }
+  .section2image{
+    width: 100%;
+  }
+  .section3image{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    
+  }
+  
+.section3image img{
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.section2textcontent,
+.section3textcontent{
+  max-width: 100%;
+  text-align: center;
+}
+.section2text,
+.section3text{
+padding-right: 10px;
+gap: 30px;
+padding-left: 10px;
+}
+.section4text{
+  flex-direction: column;
+  padding: 40px 10px;
+  justify-content: center;
+  text-align: center;
+}
+.ps4{
+  padding-bottom: 20px;
+  padding-top: 12px;
+}
+.section4icon{
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+.section4card{
+ padding-left: 10px;
+ gap: 10px;
+}
+.section4cardtext{
+  width: 90%;
+}
+.section5{
+  padding: 40px 10px;
+}
+.section5content{
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.section5 img{
+  width: 80%;
+}
+.section5 h1{
+  font-size: 34px;
+}
+.section6text{
+  padding: 40px 10px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section6 h1{
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.section6 img{
+  width: 90%;
+}
+.ps6{
+  color: white;
+}
+footer{
+  padding: 10px 10px;
+   text-align: center;
+}
+.footertext1{
+  flex-direction: column;
+}
+.footertext{
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footercontent{
+  padding-top: 20px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+}
+@media (max-width: 480px){
+   .headerimage{
+    height: 400px;
+   }
+}
+  
