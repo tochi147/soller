@@ -29,70 +29,106 @@ function setupDropdown(dropdownId){
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carousel");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const carousel = document.getElementById("carousel");
+//   const nextBtn = document.querySelector(".next");
+//   const prevBtn = document.querySelector(".prev");
 
-  if (!carousel || !nextBtn || !prevBtn) {
-    console.error("Carousel or buttons not found");
-    return;
-  }
+//   if (!carousel || !nextBtn || !prevBtn) {
+//     console.error("Carousel or buttons not found");
+//     return;
+//   }
 
-  const cardWidth = 400;
+//   const cardWidth = 400;
 
-  const updateZoom = () => {
-    const cards = carousel.querySelectorAll(".section4cardtext");
-    const center = carousel.scrollLeft + carousel.offsetWidth / 2;
+//   const updateZoom = () => {
+//     const cards = carousel.querySelectorAll(".section4cardtext");
+//     const center = carousel.scrollLeft + carousel.offsetWidth / 2;
 
-    cards.forEach((card) => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = Math.abs(center - cardCenter);
+//     cards.forEach((card) => {
+//       const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+//       const distance = Math.abs(center - cardCenter);
 
-      if (distance < cardWidth / 2) {
-        card.style.transform = "scale(1)";
-      } else {
-        card.style.transform = "scale(0.9)";
-      }
-      card.style.transition = "transform 0.3s ease";
+//       if (distance < cardWidth / 2) {
+//         card.style.transform = "scale(1)";
+//       } else {
+//         card.style.transform = "scale(0.9)";
+//       }
+//       card.style.transition = "transform 0.3s ease";
+//     });
+//   };
+
+//   const scrollToNext = () => {
+//     const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+//     if (carousel.scrollLeft + cardWidth >= maxScrollLeft) {
+//       // If at the end, go to start
+//       carousel.scrollLeft = 0;
+//     } else {
+//       carousel.scrollLeft += cardWidth;
+//     }
+//   };
+
+//   const scrollToPrev = () => {
+//     if (carousel.scrollLeft <= 0) {
+//       // If at the start, go to end
+//       carousel.scrollLeft = carousel.scrollWidth;
+//     } else {
+//       carousel.scrollLeft -= cardWidth;
+//     }
+//   };
+
+//   nextBtn.addEventListener("click", () => {
+//     scrollToNext();
+//     setTimeout(updateZoom, 300);
+//   });
+
+//   prevBtn.addEventListener("click", () => {
+//     scrollToPrev();
+//     setTimeout(updateZoom, 300);
+//   });
+
+//   carousel.addEventListener("scroll", () => {
+//     updateZoom();
+//   });
+
+//   // Initial zoom
+//   updateZoom();
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const carousel = document.querySelector('.section4card');
+//     const prevBtn = document.querySelector('.prev');
+//     const nextBtn = document.querySelector('.next');
+//     const card = document.querySelector('.section4cardtext');
+
+//     // Get card width including margin
+//     const gap = parseInt(getComputedStyle(carousel).gap) || 0;
+//     const scrollAmount = card.offsetWidth + gap;
+
+//     nextBtn.addEventListener('click', () => {
+//       carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+//     });
+
+//     prevBtn.addEventListener('click', () => {
+//       carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+//     });
+//   });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.section4card');
+    const card = document.querySelector('.section4cardtext');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    const scrollAmount = card.offsetWidth; // No gap needed
+
+    nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
-  };
 
-  const scrollToNext = () => {
-    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-    if (carousel.scrollLeft + cardWidth >= maxScrollLeft) {
-      // If at the end, go to start
-      carousel.scrollLeft = 0;
-    } else {
-      carousel.scrollLeft += cardWidth;
-    }
-  };
-
-  const scrollToPrev = () => {
-    if (carousel.scrollLeft <= 0) {
-      // If at the start, go to end
-      carousel.scrollLeft = carousel.scrollWidth;
-    } else {
-      carousel.scrollLeft -= cardWidth;
-    }
-  };
-
-  nextBtn.addEventListener("click", () => {
-    scrollToNext();
-    setTimeout(updateZoom, 300);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    scrollToPrev();
-    setTimeout(updateZoom, 300);
-  });
-
-  carousel.addEventListener("scroll", () => {
-    updateZoom();
-  });
-
-  // Initial zoom
-  updateZoom();
+    prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
 });
-
-
